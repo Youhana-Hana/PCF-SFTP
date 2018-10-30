@@ -36,7 +36,7 @@ cd deploy
 CF_PASSWORD=<PCF PASSWORD> CF_ORG=<ORG> CF_SPACE=<SPACE> CF_APP_NAME=<APP NAME> CF_VARS_FILE=<VARS FILE PATH> ./deploy.sh
 
 # For example deploying to dettagliotraffic
-CF_PASSWORD=<PCF PASSWORD> CF_ORG=collaudo-evolutivo CF_SPACE=collaudo-evolutivo CF_APP_NAME=bulk-sftp-dettagliotraffic CF_VARS_FILE=dettagliotraffic_vars.yml ./deploy.sh
+CF_PASSWORD=<PCF PASSWORD> CF_ORG=ORG CF_SPACE=SPACE CF_APP_NAME=bulk-sftp-test CF_VARS_FILE=dev_vars.yml ./deploy.sh
 ```
 
 # Configure intellij
