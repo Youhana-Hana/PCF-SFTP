@@ -1,0 +1,3 @@
+remoteDirectory: "/home/user/"
+filePattern: ".*[.]gz"
+destination: "/var/bulk/dev/zip"

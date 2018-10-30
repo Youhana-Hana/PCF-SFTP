@@ -1,0 +1,15 @@
+logging:
+  level:
+    root: INFO
+
+bulksftp:
+  source:
+    host: ${host:demo.wftpserver.com}
+    port: ${ftpPort:2222}
+    userName: ${username:demo-user}
+    password: ${password:demo-user}
+  remoteDirectory: ${remoteDirectory:/download}
+  filePattern: ${filePattern:.*[.]gz}
+  destination: ${destination:src/test/fixtures/destination}
+  cache: ${cache:elaborati}
+  rate: ${rate:3600000}

@@ -1,0 +1,17 @@
+logging:
+  level:
+    root: INFO
+
+bulksftp:
+  source:
+    host: ${host:127.0.0.1}
+    port: ${ftpPort:10022}
+    userName: test
+    password: password
+    privateKey: classpath:keys/sftp_rsa
+    privateKeyPassphrase: passphrase
+  remoteDirectory: ${remoteDirectory:/}
+  filePattern: ${filePattern:.*[.]gz}
+  destination: ${destination:src/test/fixtures/destination}
+  cache: ${cache:elaborati}
+  rate: ${rate:1000}

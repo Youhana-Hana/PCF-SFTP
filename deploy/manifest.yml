@@ -1,0 +1,18 @@
+applications:
+- name: bulk-sftp
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  no-route: true
+  stack: cflinuxfs2
+  path: ../target/bulk-sftp-1.2.6-SNAPSHOT.jar
+  env:
+    host: 10.0.0.0
+    ftpPort: 22
+    username: user
+    password: password
+    remoteDirectory: ((remoteDirectory))
+    filePattern: ((filePattern))
+    destination: ((destination))
+    rate: 600000
+    cache: "cache"

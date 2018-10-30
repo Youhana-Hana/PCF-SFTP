@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+echo 'Running commit messagce check'
+
+# regex to validate in commit msg
+commit_regex='(TFD-[0-9]+|merge|rebase|maven-release-plugin|ci skip)'
+
+error_msg="Aborting commit. Your commit message is missing either a JIRA Issue TFD-xxx, 'rebase' or 'Merge'"
+
+if ! grep -iqE "$commit_regex" "$1"; then
+    echo "$error_msg" >&2
+    exit 1
+fi
+
+echo 'Well done, commit successful'
